@@ -1,0 +1,29 @@
+<html>
+
+<head>
+	<script type='module' src='extraLifeReporter.js'></script>
+	<script type='module' src='HttpRequestService.js'></script>
+	<script type='module' src='StreamPresentation.js'></script>
+	<link rel="stylesheet" href="animate.css">
+	<link rel="stylesheet" href='extraLifeOverlay.css'>
+</head>
+
+<body>
+	<div id="extraLifeOverlay"></div>
+	<script type="module">
+		import {ExtraLifeReporter} from './extraLifeReporter.js';
+		import {HttpGetRequestService} from './HttpRequestService.js';
+		import {StreamPresentation} from './StreamPresentation.js';
+
+		const url = 'https://www.extra-life.org/api/teams/38776/participants';
+		const requestService = new HttpGetRequestService();
+		const presentation = new StreamPresentation();
+
+		const endTime = new Date(Date.UTC(2018, 10, 4, 15, 55));
+		const reporter = new ExtraLifeReporter(requestService, presentation, 38776, endTime);
+		reporter.startDonationWatch();
+		reporter.rollCredits();
+	</script>
+</body>
+
+</html>

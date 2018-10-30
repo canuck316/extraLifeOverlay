@@ -1,0 +1,74 @@
+@font-face {
+	font-family: Furore-webfont;
+	src: url("Furore.otf");
+}
+
+.donationDisplay {
+	width: 100%;
+	text-align: center;
+	font-family: "Furore-webfont", sans-serif;
+	font-size: 56;
+	color: rgb(38, 194, 235);
+	text-shadow:
+		1px 1px 0 white,
+		-1px -1px 0 white,  
+		1px -1px 0 white,
+		-1px 1px 0 white,
+		1px 1px 0 white;
+}
+
+.extralifeOverlay {
+	width: 100%;
+	height: 100%;
+}
+
+.creditsTitle {
+	color: rgb(38, 194, 235);
+	font-family: "Furore-webfont", sans-serif;
+	font-size: 36px;
+	text-align: center;
+	text-shadow:
+		1px 1px 0 white,
+		-1px -1px 0 white,  
+		1px -1px 0 white,
+		-1px 1px 0 white,
+		1px 1px 0 white;
+}
+
+.creditsSectionTitle {
+	text-align: center;
+	font-family: "Furore-webfont", sans-serif;
+	font-size: 24px;
+	color: rgb(38, 194, 235);
+	padding-top: 50px;
+	padding-bottom: 20px;
+	text-shadow:
+		1px 1px 0 white,
+		-1px -1px 0 white,  
+		1px -1px 0 white,
+		-1px 1px 0 white,
+		1px 1px 0 white;
+}
+
+.creditsEntry {
+	text-align: center;
+	font-family: "Furore-webfont", sans-serif;
+	text-shadow:
+		1px 1px 0 white,
+		-1px -1px 0 white,  
+		1px -1px 0 white,
+		-1px 1px 0 white,
+		1px 1px 0 white;
+}
+
+.creditMarquee {
+	top: 16em;
+    position: relative;
+    box-sizing: border-box;
+    animation: marquee 30s linear, marqueeHide 1s linear 14s;
+}
+
+@keyframes marquee {
+    0%   { top:   1200px }
+    100% { top: -2400px }
+}
