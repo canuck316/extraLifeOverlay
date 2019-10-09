@@ -52,7 +52,7 @@ const _createCreditsData = function(participants, donors) {
 
 	const donorNames = [];
 	donors.forEach(donor => {
-		if (donor.displayName === 'Anonymous') {
+		if (donor.displayName === 'Anonymous' || !donor.hasOwnProperty('displayName')) {
 			creditsData.anonymousDonors++;
 		} else if (donorNames.indexOf(donor.displayName) === -1) {
 			creditsData.donors.push(donor.displayName);

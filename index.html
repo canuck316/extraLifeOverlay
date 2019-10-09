@@ -18,9 +18,10 @@
 		const url = 'https://www.extra-life.org/api/teams/38776/participants';
 		const requestService = new HttpGetRequestService();
 		const presentation = new StreamPresentation();
+		const teamId = 44435;
 
-		const endTime = new Date(Date.UTC(2018, 10, 4, 15, 55));
-		const reporter = new ExtraLifeReporter(requestService, presentation, 38776, endTime);
+		const endTime = new Date(Date.UTC(2019, 10, 8, 19, 31));
+		const reporter = new ExtraLifeReporter(requestService, presentation, teamId, endTime);
 		reporter.startDonationWatch();
 		reporter.rollCredits();
 	</script>

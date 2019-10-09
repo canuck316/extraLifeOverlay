@@ -3,6 +3,10 @@
 	src: url("Furore.otf");
 }
 
+body {
+ overflow: hidden;
+}
+
 .donationDisplay {
 	width: 100%;
 	text-align: center;
