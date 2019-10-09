@@ -20,11 +20,12 @@
 		const presentation = new StreamPresentation();
 		const teamId = 44435;
 
-		const endTime = new Date(2019, 10, 3, 9);
+		const endTime = new Date(2019, 10, 3, 8, 59);
 		const reporter = new ExtraLifeReporter(requestService, presentation, teamId, endTime);
 		reporter.startDonationWatch();
-		
-		reporter.rollCredits();
+
+		// uncomment this if you want to see the credits roll right away
+		//reporter.rollCredits();
 	</script>
 </body>
 
