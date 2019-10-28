@@ -14,7 +14,8 @@ export class StreamPresentation {
 		this.trackedCount = donations.length;
 		const messages = ['New Donation!'];
 		donationsToShow.forEach((donation) => {
-			messages.push(_removeLastName(donation.displayName));
+			const displayName = (donation.displayName) ? _removeLastName(donation.displayName) : 'Anonymous';
+			messages.push(displayName);
 			messages.push(`Amount: ${donation.amount === null ? 'Anonymous' : formatter.format(donation.amount)}`);
 		});
 
